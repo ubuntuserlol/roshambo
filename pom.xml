@@ -37,9 +37,9 @@
           <artifactId>tomcat7-maven-plugin</artifactId>
           <version>2.2</version>
           <configuration>
-            <url>http://192.168.126.159:8080/manager/text</url>
+            <url>http://localhost:8080/manager/text</url>
             <server>tomcatServer</server>
-            <path>/rps</path>
+            <path>/roshambo</path>
             <username>adminTom</username>
             <password>adminTom</password>
           </configuration>
