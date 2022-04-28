@@ -1,4 +1,4 @@
-FROM tomcat:8.0-alpine
+FROM tomcat:9.0
 LABEL maintainer="kmarshall@neumont.edu"
 ADD target/roshambo.war /usr/local/tomcat/webapps/
 ADD target/roshambo/game.html /usr/local/tomcat/webapps/roshambo/index.html
