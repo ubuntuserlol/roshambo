@@ -138,19 +138,59 @@ function GameService() {
 
 		let result = "error";		
 
+		Array.prototype.random = function () {
+			return this[Math.floor((Math.random()*this.length))];
+		}
+		
+		let options = ["rock", "paper", "scissors"];
+		let chosen = options.random();
+		
+		let result = "error";		
+				
+		
 		if (input==("scissors")) {
-			result = "lose";
-			theScore.increaseLosses();
+			if (chosen==("rock")){
+				result = "lose";
+				theScore.increaseLosses();
+			}
+			if (chosen==("paper")){
+				result = "win";
+				theScore.increaseWins();
+			}
+			if (chosen==("scissors")){
+				result = "tie";
+				theScore.increaseTies();
+			}			
 		}
 
 		if (input==("paper")) {
-			result = "win";
-			theScore.increaseWins();
+			if (chosen==("rock")){
+				result = "win";
+				theScore.increaseWins();
+			}
+			if (chosen==("paper")){
+				result = "tie";
+				theScore.increaseTies();
+			}
+			if (chosen==("scissors")){
+				result = "lose";
+				theScore.increaseLosses();
+			}
 		}
 
 		if (input==("rock")) {
-			result = "tie";
-			theScore.increaseTies();
+			if (chosen==("rock")){
+				result = "tie";
+				theScore.increaseTies();
+			}
+			if (chosen==("paper")){
+				result = "lose";
+				theScore.increaseLosses();
+			}
+			if (chosen==("scissors")){
+				result = "win";
+				theScore.increaseWins();
+			}
 		}
 		
 		if (result == "error") { return; }
@@ -221,4 +261,3 @@ console.log(score.wins);
 console.log(score.toString());
 */
 </script>
-
