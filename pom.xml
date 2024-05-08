@@ -14,8 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -37,11 +37,11 @@
           <artifactId>tomcat7-maven-plugin</artifactId>
           <version>2.2</version>
           <configuration>
-            <url>http://localhost:8088/manager/text</url>
+            <url>http://10.30.30.51:8080/manager/text</url>
             <server>tomcatServer</server>
             <path>/roshambo</path>
-            <username>adminTom</username>
-            <password>adminTom</password>
+            <username>tomcat</username>
+            <password>tomcat</password>
           </configuration>
         </plugin>
 
