@@ -141,15 +141,15 @@ function GameService() {
 		let result = "error";		
 
 		if (input==("scissors")) {
-			if (serverGesture=="rock") {
+			if (serverGesture==("rock")) {
 				result = "lose";
 				theScore.increaseLosses();
 			}
-			if (serverGesture=="paper") {
+			if (serverGesture==("paper")) {
 				result = "win";
 				theScore.increaseWins();
 			}
-			if (serverGesture=="scissors") {
+			if (serverGesture==("scissors")) {
 				result = "tie";
 				theScore.increaseTies();
 			}
@@ -157,15 +157,15 @@ function GameService() {
 		}
 
 		if (input==("paper")) {
-			if (serverGesture=="rock") {
+			if (serverGesture==("rock")) {
 				result = "win";
 				theScore.increaseWins();
 			}
-			if (serverGesture=="paper") {
+			if (serverGesture==("paper")) {
 				result = "tie";
 				theScore.increaseTies();
 			}
-			if (serverGesture=="scissors") {
+			if (serverGesture==("scissors")) {
 				result = "lose";
 				theScore.increaseLosses();
 			}
@@ -173,15 +173,15 @@ function GameService() {
 		}
 
 		if (input==("rock")) {
-			if (serverGesture=="rock") {
+			if (serverGesture==("rock")) {
 				result = "tie";
 				theScore.increaseTies();
 			}
-			if (serverGesture=="paper") {
+			if (serverGesture==("paper")) {
 				result = "lose";
 				theScore.increaseLosses();
 			}
-			if (serverGesture=="scissors") {
+			if (serverGesture==("scissors")) {
 				result = "win";
 				theScore.increaseWins();
 			}
